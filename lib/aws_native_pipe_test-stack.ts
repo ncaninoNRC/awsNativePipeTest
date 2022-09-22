@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { CodePipeline, CodePipelineSource, ShellStep, Step } from 'aws-cdk-lib/pipelines';
 
-export class CiCdAwsPipelineDemoStack extends cdk.Stack {
+export class AwsNativePipeTestStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -15,12 +15,5 @@ export class CiCdAwsPipelineDemoStack extends cdk.Stack {
                    'npx cdk synth']
       })
     });
-
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'AwsNativePipeTestQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
   }
 }
